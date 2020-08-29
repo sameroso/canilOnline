@@ -1,8 +1,9 @@
 import styled from 'styled-components'
 
 export default {
+  Text: styled.span``,
   div: styled.div`
-    background-color: #f9f8fd;
+    background-color: #ffffff;
   `,
   Container: styled.div`
     @media (max-width: 375px) {

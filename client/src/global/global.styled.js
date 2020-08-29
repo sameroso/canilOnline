@@ -49,4 +49,6 @@ table {
 	height:100%
 }
 html { height:100%}
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
 `

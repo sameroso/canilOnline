@@ -1,15 +1,30 @@
 import styled from 'styled-components'
-import caoeGato from '../../assets/cao-e-gato-juntos.jpg'
 
 export default {
-  image: styled.div`
-    background-image: url(${caoeGato});
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 100%;
-    height: 100%;
-  `,
+  text: styled.span``,
+  image: styled.img``,
   div: styled.div`
-    height: 100%;
+    height: 80%;
+    background-color: #f9f8fd;
+  `,
+  flex: styled.div`
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  `,
+  Container: styled.div`
+    @media (max-width: 375px) {
+      margin: 0 5px;
+    }
+    @media (min-width: 375px) {
+      margin: 0 10px;
+    }
+    @media (min-width: 425px) {
+      margin: 0 20px;
+    }
+    @media (min-width: 630px) {
+      margin: 0 40px;
+    }
+    max-width: 1000px;
   `,
 }

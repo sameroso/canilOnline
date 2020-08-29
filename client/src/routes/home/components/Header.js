@@ -9,7 +9,7 @@ export default function Header() {
       <s.Container>
         <s.Menu>
           <GiHamburgerMenu size={22} color="#9e9ea7" />
-          <text>SignIn</text>
+          <s.Text>SignIn</s.Text>
         </s.Menu>
       </s.Container>
     </s.div>
