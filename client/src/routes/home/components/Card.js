@@ -1,19 +1,25 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
+import s from './Card.styled'
+import CardSlider from './CardSlider'
+import CardBody from './CardBody'
+
 export default function Card(props) {
   return (
-    <div style={{ width: '30%', margin: '10px' }}>
+    <s.Container>
       <div>
-        <span>{props.name}</span>
+        <CardSlider />
       </div>
       <div>
-        <span>{props.age}</span>
+        <CardBody
+          name={props.name}
+          user={props.user}
+          age={props.age}
+          description={props.description}
+        />
       </div>
-      <div>
-        <span>{props.user}</span>
-      </div>
-    </div>
+    </s.Container>
   )
 }
 
@@ -22,8 +28,10 @@ Card.propTypes = {
     name: PropTypes.string,
     age: PropTypes.string,
     user: PropTypes.string,
+    description: PropTypes.string,
   },
   name: PropTypes.string,
   age: PropTypes.string,
   user: PropTypes.string,
+  description: PropTypes.string,
 }

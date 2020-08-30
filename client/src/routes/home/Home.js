@@ -12,14 +12,20 @@ export default function Home() {
         <Header />
         <s.flex>
           <s.Container />
-          <s.text style={{ fontFamily: "'Roboto', sans-serif", fontSize: 40 }}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing lit.
-          </s.text>
-          <s.image src={dog} height="50%" width="250px" />
+          <s.flexChild>
+            <img src={dog} height="50%" width="250px" />
+          </s.flexChild>
+          <s.flexChild>
+            <s.text>
+              Lorem ipsum dolor sit amet, consectetur adipiscing lit.
+            </s.text>
+          </s.flexChild>
           <s.Container />
         </s.flex>
       </s.div>
-      <List />
+      <div>
+        <List />
+      </div>
     </>
   )
 }

@@ -9,6 +9,11 @@ export default [
     address: 'rua floriano peixoto ,249 centro',
     GeoJson: '',
     user: 'emilia',
+    description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla varius velit ac tristique lacinia. 
+    Ut consectetur malesuada sollicitudin. Nam sit amet pulvinar augue. Ut fringilla ex non ipsum consectetur, 
+    ut ultrices erat mollis. Sed ultricies et mauris vel lobortis. Nam sollicitudin urna eget porttitor convallis.
+     Sed id ultricies neque.`,
+    telephone: '31-991566498',
   },
   {
     id: '2',
@@ -20,6 +25,11 @@ export default [
     address: 'rua floriano peixoto ,249 centro',
     GeoJson: '',
     user: 'julia',
+    description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla varius velit ac tristique lacinia. 
+    Ut consectetur malesuada sollicitudin. Nam sit amet pulvinar augue. Ut fringilla ex non ipsum consectetur, 
+    ut ultrices erat mollis. Sed ultricies et mauris vel lobortis. Nam sollicitudin urna eget porttitor convallis.
+     Sed id ultricies neque.`,
+    telephone: '31-991566498',
   },
   {
     id: '3',
@@ -31,6 +41,12 @@ export default [
     address: 'rua floriano peixoto ,249 centro',
     GeoJson: '',
     user: 'jonjon',
+    description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla varius velit ac tristique lacinia. 
+    Ut consectetur malesuada sollicitudin. Nam sit amet pulvinar augue. Ut fringilla ex non ipsum consectetur, 
+    ut ultrices erat mollis. Sed ultricies et mauris vel lobortis. Nam sollicitudin urna eget porttitor convallis.
+     Sed id ultricies neque.`,
+    telephone: '31-991566498',
+    whatsApp: '31991566498',
   },
   {
     id: '4',
@@ -42,6 +58,12 @@ export default [
     address: 'rua floriano peixoto ,249 centro',
     GeoJson: '',
     user: 'jinas',
+    description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla varius velit ac tristique lacinia. 
+    Ut consectetur malesuada sollicitudin. Nam sit amet pulvinar augue. Ut fringilla ex non ipsum consectetur, 
+    ut ultrices erat mollis. Sed ultricies et mauris vel lobortis. Nam sollicitudin urna eget porttitor convallis.
+     Sed id ultricies neque.`,
+    telephone: '31-991566498',
+    whatsApp: '31991566498',
   },
   {
     id: '5',
@@ -53,6 +75,12 @@ export default [
     address: 'rua floriano peixoto ,249 centro',
     GeoJson: '',
     user: 'joias',
+    description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla varius velit ac tristique lacinia. 
+    Ut consectetur malesuada sollicitudin. Nam sit amet pulvinar augue. Ut fringilla ex non ipsum consectetur, 
+    ut ultrices erat mollis. Sed ultricies et mauris vel lobortis. Nam sollicitudin urna eget porttitor convallis.
+     Sed id ultricies neque.`,
+    telephone: '31-991566498',
+    whatsApp: '31991566498',
   },
   {
     id: '6',
@@ -64,5 +92,11 @@ export default [
     address: 'rua floriano peixoto ,249 centro',
     GeoJson: '',
     user: 'pequena',
+    description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla varius velit ac tristique lacinia. 
+    Ut consectetur malesuada sollicitudin. Nam sit amet pulvinar augue. Ut fringilla ex non ipsum consectetur, 
+    ut ultrices erat mollis. Sed ultricies et mauris vel lobortis. Nam sollicitudin urna eget porttitor convallis.
+     Sed id ultricies neque.`,
+    telephone: '31-991566498',
+    whatsApp: '31991566498',
   },
 ]

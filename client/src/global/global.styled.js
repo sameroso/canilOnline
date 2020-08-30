@@ -28,7 +28,6 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
 	line-height: 1;
-	height:100%
 }
 ol, ul {
 	list-style: none;
@@ -45,10 +44,8 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }}
-#root {
-	height:100%
-}
-html { height:100%}
+
+
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
 `
