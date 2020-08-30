@@ -2,6 +2,7 @@ import styled from 'styled-components'
 
 export default {
   text: styled.span`
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
     font-family: 'Roboto', sans-serif;
     font-size: 40px;
     @media (max-width: 664px) {
