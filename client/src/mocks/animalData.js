@@ -13,7 +13,10 @@ export default [
     Ut consectetur malesuada sollicitudin. Nam sit amet pulvinar augue. Ut fringilla ex non ipsum consectetur, 
     ut ultrices erat mollis. Sed ultricies et mauris vel lobortis. Nam sollicitudin urna eget porttitor convallis.
      Sed id ultricies neque.`,
-    telephone: '31-991566498',
+    phone: '31991566498',
+    whatsApp: '5531991566498',
+    email: 'samerkkr@hotmail.com',
+    faceBook: 'https://www.facebook.com/samer.kayali.7/',
   },
   {
     id: '2',
@@ -29,7 +32,10 @@ export default [
     Ut consectetur malesuada sollicitudin. Nam sit amet pulvinar augue. Ut fringilla ex non ipsum consectetur, 
     ut ultrices erat mollis. Sed ultricies et mauris vel lobortis. Nam sollicitudin urna eget porttitor convallis.
      Sed id ultricies neque.`,
-    telephone: '31-991566498',
+    phone: '31991566498',
+    whatsApp: '5531991566498',
+    email: 'samerkkr@hotmail.com',
+    faceBook: 'https://www.facebook.com/samer.kayali.7/',
   },
   {
     id: '3',
@@ -45,8 +51,10 @@ export default [
     Ut consectetur malesuada sollicitudin. Nam sit amet pulvinar augue. Ut fringilla ex non ipsum consectetur, 
     ut ultrices erat mollis. Sed ultricies et mauris vel lobortis. Nam sollicitudin urna eget porttitor convallis.
      Sed id ultricies neque.`,
-    telephone: '31-991566498',
-    whatsApp: '31991566498',
+    phone: '31991566498',
+    whatsApp: '5531991566498',
+    email: 'samerkkr@hotmail.com',
+    faceBook: 'https://www.facebook.com/samer.kayali.7/',
   },
   {
     id: '4',
@@ -62,8 +70,10 @@ export default [
     Ut consectetur malesuada sollicitudin. Nam sit amet pulvinar augue. Ut fringilla ex non ipsum consectetur, 
     ut ultrices erat mollis. Sed ultricies et mauris vel lobortis. Nam sollicitudin urna eget porttitor convallis.
      Sed id ultricies neque.`,
-    telephone: '31-991566498',
-    whatsApp: '31991566498',
+    phone: '31991566498',
+    whatsApp: '5531991566498',
+    email: 'samerkkr@hotmail.com',
+    faceBook: 'https://www.facebook.com/samer.kayali.7/',
   },
   {
     id: '5',
@@ -79,8 +89,10 @@ export default [
     Ut consectetur malesuada sollicitudin. Nam sit amet pulvinar augue. Ut fringilla ex non ipsum consectetur, 
     ut ultrices erat mollis. Sed ultricies et mauris vel lobortis. Nam sollicitudin urna eget porttitor convallis.
      Sed id ultricies neque.`,
-    telephone: '31-991566498',
-    whatsApp: '31991566498',
+    phone: '31991566498',
+    whatsApp: '5531991566498',
+    email: 'samerkkr@hotmail.com',
+    faceBook: 'https://www.facebook.com/samer.kayali.7/',
   },
   {
     id: '6',
@@ -96,7 +108,9 @@ export default [
     Ut consectetur malesuada sollicitudin. Nam sit amet pulvinar augue. Ut fringilla ex non ipsum consectetur, 
     ut ultrices erat mollis. Sed ultricies et mauris vel lobortis. Nam sollicitudin urna eget porttitor convallis.
      Sed id ultricies neque.`,
-    telephone: '31-991566498',
-    whatsApp: '31991566498',
+    phone: '31991566498',
+    whatsApp: '5531991566498',
+    email: 'samerkkr@hotmail.com',
+    faceBook: 'https://www.facebook.com/samer.kayali.7/',
   },
 ]

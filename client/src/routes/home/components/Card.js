@@ -17,6 +17,10 @@ export default function Card(props) {
           user={props.user}
           age={props.age}
           description={props.description}
+          email={props.email}
+          phone={props.phone}
+          faceBook={props.faceBook}
+          whatsApp={props.whatsApp}
         />
       </div>
     </s.Container>
@@ -24,14 +28,22 @@ export default function Card(props) {
 }
 
 Card.propTypes = {
-  props: {
+  props: PropTypes.shape({
     name: PropTypes.string,
-    age: PropTypes.string,
+    age: PropTypes.number,
     user: PropTypes.string,
     description: PropTypes.string,
-  },
+    email: PropTypes.string,
+    phone: PropTypes.string,
+    faceBook: PropTypes.string,
+    whatsApp: PropTypes.string,
+  }),
   name: PropTypes.string,
-  age: PropTypes.string,
+  age: PropTypes.number,
   user: PropTypes.string,
   description: PropTypes.string,
+  email: PropTypes.string,
+  phone: PropTypes.string,
+  faceBook: PropTypes.string,
+  whatsApp: PropTypes.string,
 }
