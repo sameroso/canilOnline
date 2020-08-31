@@ -3,6 +3,7 @@ import styled from 'styled-components'
 export default {
   Container: styled.div`
     padding: 10px;
+    margin-top: 23px;
   `,
   Name: styled.span`
     font-family: 'Roboto', sans-serif;

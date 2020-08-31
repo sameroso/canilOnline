@@ -1,6 +1,6 @@
-.awssld__content > img {
-  object-fit: contain !important;
-}
+/* .awssld__content > img {
+  object-fit: cover !important;
+} */
 .awssld__bullets button {
   width: 10px !important;
   height: 10px !important;
