@@ -12,16 +12,7 @@ export default function Card(props) {
         <CardSlider />
       </div>
       <div>
-        <CardBody
-          name={props.name}
-          user={props.user}
-          age={props.age}
-          description={props.description}
-          email={props.email}
-          phone={props.phone}
-          faceBook={props.faceBook}
-          whatsApp={props.whatsApp}
-        />
+        <CardBody {...props} />
       </div>
     </s.Container>
   )

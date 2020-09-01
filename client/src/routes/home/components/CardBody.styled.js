@@ -14,7 +14,9 @@ export default {
     font-size: 25px;
   `,
   Header: styled.div`
-    margin: 7px 0;
+    margin: 7px 15px;
+    display: flex;
+    justify-content: space-between;
   `,
   Footer: styled.div`
     margin: 8px 0;

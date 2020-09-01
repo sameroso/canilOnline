@@ -1,24 +1,35 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import PropTypes from 'prop-types'
+import { Link } from 'react-router-dom'
 
 import s from './CardBody.styled'
 import CardContacts from './CardContatcs'
+import { PetInfoContext } from '../../../context/petInfo'
 
-export default function CardBody({
-  name,
-  user,
-  age,
-  description,
-  whatsApp,
-  faceBook,
-  phone,
-  email,
-}) {
+export default function CardBody(props) {
+  const {
+    name,
+    user,
+    age,
+    description,
+    whatsApp,
+    faceBook,
+    phone,
+    email,
+  } = props
+
+  const { setPetInfo } = useContext(PetInfoContext)
+
   return (
     <s.Container>
       <s.Header>
-        <s.Name>{name}</s.Name>
-        <s.Age>{age}</s.Age>
+        <div>
+          <s.Name>{name}</s.Name>
+          <s.Age>{age}</s.Age>
+        </div>
+        <Link to="/detalhe/jones" onClick={() => setPetInfo(props)}>
+          <div>Ver mais</div>
+        </Link>
       </s.Header>
       <div>{description}</div>
       <s.Footer>
