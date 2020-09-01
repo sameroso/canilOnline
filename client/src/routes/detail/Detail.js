@@ -3,14 +3,15 @@ import PropTypes from 'prop-types'
 
 import { PetInfoContext } from '../../context/petInfo'
 import Carousel from './components/Carousel'
+import DetailBody from './components/DetailBody'
 import s from './Detail.styled'
 
-export default function DetailPage({ match }) {
+export default function DetailPage() {
   const { petInfo, setPetInfo } = useContext(PetInfoContext)
 
   useEffect(() => {
     if (petInfo) {
-      console.log(match.params.id)
+      console.log(petInfo)
     }
 
     function clearPetInfo() {
@@ -22,14 +23,14 @@ export default function DetailPage({ match }) {
 
   return (
     <>
+      <s.NameContainer>
+        <s.Name>{petInfo?.name}</s.Name>
+      </s.NameContainer>
       <s.CarouselContainer>
         <Carousel />
       </s.CarouselContainer>
       <s.Bodycontainer>
-        <div>
-          <div>{petInfo?.name}</div>
-          <div>{petInfo?.description}</div>
-        </div>
+        <DetailBody petInfo={petInfo} />
       </s.Bodycontainer>
     </>
   )

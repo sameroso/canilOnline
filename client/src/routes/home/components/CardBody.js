@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { Link } from 'react-router-dom'
 
 import s from './CardBody.styled'
-import CardContacts from './CardContatcs'
+import CardContacts from '../../../components/Contatcs'
 import { PetInfoContext } from '../../../context/petInfo'
 
 export default function CardBody(props) {

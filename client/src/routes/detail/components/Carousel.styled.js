@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 export default {
   Container: styled.div`
-    max-width: 700px;
+    max-width: 800px;
     display: flex;
     justify-content: center;
     align-content: center;
