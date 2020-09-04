@@ -15,6 +15,9 @@ export default {
     font-size: 30px;
   `,
   NameContainer: styled.div`
+    max-width: 800px;
     margin: 10px 5px;
+    display: flex;
+    margin: 15px auto;
   `,
 }

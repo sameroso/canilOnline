@@ -6,6 +6,7 @@ export default [
     photo3: '../assets/dog.png',
     name: 'smeagol',
     age: 1,
+    angerLevel: 5,
     address: {
       cep: '36570-043',
       logradouro: 'Rua Floriano Peixoto',
@@ -38,6 +39,7 @@ export default [
     photo3: '../assets/dog.png',
     name: 'girassol',
     age: 1,
+    angerLevel: 5,
     address: {
       cep: '36570-043',
       logradouro: 'Rua Floriano Peixoto',
@@ -70,6 +72,7 @@ export default [
     photo3: '../assets/dog.png',
     name: 'floquinho',
     age: 1,
+    angerLevel: 5,
     address: {
       cep: '36570-043',
       logradouro: 'Rua Floriano Peixoto',
@@ -102,6 +105,7 @@ export default [
     photo3: '../assets/dog.png',
     name: 'saman',
     age: 1,
+    angerLevel: 5,
     address: {
       cep: '36570-043',
       logradouro: 'Rua Floriano Peixoto',
@@ -134,6 +138,7 @@ export default [
     photo3: '../assets/dog.png',
     name: 'paraburça',
     age: 1,
+    angerLevel: 5,
     address: {
       cep: '36570-043',
       logradouro: 'Rua Floriano Peixoto',
@@ -166,6 +171,7 @@ export default [
     photo3: '../assets/dog.png',
     name: 'palavras',
     age: 1,
+    angerLevel: 5,
     address: {
       cep: '36570-043',
       logradouro: 'Rua Floriano Peixoto',

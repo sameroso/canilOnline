@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 
 import s from './DetailBody.styled'
 import ContactInfo from './ContactInfo'
+import PetDetails from './PetDetails'
 
 export default function DetailBody({ petInfo }) {
   return (
@@ -22,6 +23,9 @@ export default function DetailBody({ petInfo }) {
               </span>
             </div>
             <s.Description>{petInfo?.description}</s.Description>
+          </div>
+          <div>
+            <PetDetails petInfo={{ ...petInfo }} />
           </div>
         </s.DescriptionContainer>
       </div>
