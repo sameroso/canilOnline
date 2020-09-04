@@ -2,4 +2,22 @@
   .font-display {
     display: none;
   }
-} ;
+}
+
+@media (min-width: 421px) {
+  .font-display {
+    display: inline-block;
+  }
+}
+
+@media (min-width: 522px) {
+  .font-display {
+    display: none;
+  }
+}
+
+@media (min-width: 642px) {
+  .font-display {
+    display: inline-block;
+  }
+}
