@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import PropTypes from 'prop-types'
 
-import './AngerBar.css'
+import './MeasureBar.css'
 
 let arr = []
 
@@ -43,7 +43,11 @@ export default function AngerBar(props) {
     return (
       <div
         key={arr[index]?.number}
-        style={{ display: 'flex', alignItems: 'center' }}
+        style={{
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+        }}
       >
         {index !== 0 && (
           <div>
@@ -102,7 +106,13 @@ export default function AngerBar(props) {
   })
 
   return (
-    <div style={{ display: 'flex', alignItems: 'center' }}>
+    <div
+      style={{
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+      }}
+    >
       <div style={{ margin: '10px 10px' }} className="font-display">
         {props?.initialParam}
       </div>

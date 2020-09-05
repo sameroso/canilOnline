@@ -1,8 +1,10 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
+import s from './Castrated.styled'
+
 export default function Castrated({ isCastrated }) {
-  const x = () => {
+  const castrationInfo = () => {
     if (isCastrated === true) {
       return <div>é vacinado</div>
     } else if (isCastrated === false) {
@@ -13,10 +15,15 @@ export default function Castrated({ isCastrated }) {
   }
 
   return (
-    <div style={{ margin: '30px 0 ' }}>
-      <div>O cão é castrado?</div>
-      <div>{x()}</div>
-    </div>
+    <s.Border>
+      <s.Container>
+        <s.TitleContainer>
+          <s.Text>castrado?</s.Text>
+          <s.Line color="black" />
+        </s.TitleContainer>
+        <div>{castrationInfo()}</div>
+      </s.Container>
+    </s.Border>
   )
 }
 

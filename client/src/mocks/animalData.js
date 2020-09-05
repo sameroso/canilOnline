@@ -31,6 +31,9 @@ export default [
     whatsApp: '5531991566498',
     email: 'samerkkr@hotmail.com',
     faceBook: 'https://www.facebook.com/samer.kayali.7/',
+    agitationLevel: 3,
+    vaccines: [{ name: 'V8', date: new Date(), id: '0' }],
+    race: 'vira lata',
   },
   {
     id: '2',
@@ -64,6 +67,9 @@ export default [
     whatsApp: '5531991566498',
     email: 'samerkkr@hotmail.com',
     faceBook: 'https://www.facebook.com/samer.kayali.7/',
+    agitationLevel: 3,
+    vaccines: [{ name: 'V8', date: new Date(), id: '1' }],
+    race: 'vira lata',
   },
   {
     id: '3',
@@ -97,6 +103,11 @@ export default [
     whatsApp: '5531991566498',
     email: 'samerkkr@hotmail.com',
     faceBook: 'https://www.facebook.com/samer.kayali.7/',
+    agitationLevel: 3,
+    vaccines: [
+      { name: 'V8', date: new Date(), id: '2' },
+      { name: 'V10', date: new Date(), id: '22' },
+    ],
   },
   {
     id: '4',
@@ -130,6 +141,9 @@ export default [
     whatsApp: '5531991566498',
     email: 'samerkkr@hotmail.com',
     faceBook: 'https://www.facebook.com/samer.kayali.7/',
+    agitationLevel: 3,
+    vaccines: [{ name: 'V8', date: new Date(), id: '3' }],
+    race: 'vira lata',
   },
   {
     id: '5',
@@ -163,6 +177,9 @@ export default [
     whatsApp: '5531991566498',
     email: 'samerkkr@hotmail.com',
     faceBook: 'https://www.facebook.com/samer.kayali.7/',
+    agitationLevel: 3,
+    vaccines: [{ name: 'V8', date: new Date(), id: '4' }],
+    race: 'vira lata',
   },
   {
     id: '6',
@@ -196,5 +213,8 @@ export default [
     whatsApp: '5531991566498',
     email: 'samerkkr@hotmail.com',
     faceBook: 'https://www.facebook.com/samer.kayali.7/',
+    agitationLevel: 3,
+    vaccines: [{ name: 'V8', date: new Date(), id: '5' }],
+    race: 'vira lata',
   },
 ]

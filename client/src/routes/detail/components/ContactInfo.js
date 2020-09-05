@@ -11,12 +11,7 @@ export default function ContactInfo(props) {
       <div>
         <div>
           <div>Converse com {props?.user}</div>
-          <img
-            src={menina}
-            height="120px"
-            width="120px"
-            style={{ borderRadius: '100px' }}
-          />
+          <s.Image src={menina} height="120px" width="120px" />
         </div>
       </div>
       <Contacts {...props} isDetailPage />

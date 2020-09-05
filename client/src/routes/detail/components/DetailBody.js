@@ -12,16 +12,9 @@ export default function DetailBody({ petInfo }) {
       <div>
         <s.DescriptionContainer>
           <div>
-            <div style={{ margin: '10px 0' }}>
-              <span
-                style={{
-                  fontSize: '22px',
-                  fontFamily: "'Cardo', serif",
-                }}
-              >
-                Descrição
-              </span>
-            </div>
+            <s.DescriptionTitleContainer>
+              <s.DescriptionTitle>Descrição</s.DescriptionTitle>
+            </s.DescriptionTitleContainer>
             <s.Description>{petInfo?.description}</s.Description>
           </div>
           <div>

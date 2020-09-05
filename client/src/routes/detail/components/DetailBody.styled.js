@@ -18,4 +18,11 @@ export default {
   DescriptionContainer: styled.div`
     margin: 0 10px;
   `,
+  DescriptionTitleContainer: styled.div`
+    margin: 10px 0;
+  `,
+  DescriptionTitle: styled.div`
+    font-size: 22px;
+    font-family: 'cardo', serif;
+  `,
 }
