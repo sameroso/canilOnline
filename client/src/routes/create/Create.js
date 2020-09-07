@@ -1,12 +1,20 @@
 import React from 'react'
 
 /* import s from './Create.styled' */
-import AddImg from './components/AddImg'
+import Images from './components/Images'
+import Header from './components/Header'
+import { PetFormContextProvider } from '../../context/petForm'
+import { FormNavigationContextProvider } from '../../context/formNavigation'
 
 export default function Create() {
   return (
-    <div>
-      <AddImg />
-    </div>
+    <PetFormContextProvider>
+      <FormNavigationContextProvider>
+        <Header />
+        <div>
+          <Images />
+        </div>
+      </FormNavigationContextProvider>
+    </PetFormContextProvider>
   )
 }

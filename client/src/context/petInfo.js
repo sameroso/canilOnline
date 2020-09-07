@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 export const PetInfoContext = createContext()
 
 export function PetInfoContextProvider({ children }) {
-  const [petInfo, setPetInfo] = useState(null)
+  const [petInfo, setPetInfo] = useState()
 
   return (
     <PetInfoContext.Provider value={{ petInfo, setPetInfo }}>
