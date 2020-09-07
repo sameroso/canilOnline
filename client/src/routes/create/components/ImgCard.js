@@ -27,6 +27,7 @@ export default function ImgCard({
           </label>
           <input
             type="file"
+            accept="image/*"
             onChange={e => {
               console.log(typeof e.target.files[0].name)
               handleFileInputChange(e, true, preview)
