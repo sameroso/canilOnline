@@ -13,7 +13,7 @@ export default function ImgCard({
   return (
     <>
       <s.Border>
-        <img src={preview} alt="chosen" height="100px" width="100px" />
+        <img src={preview} alt="chosen" height="130px" width="120px" />
         <div
           style={{
             cursor: 'pointer',
@@ -28,10 +28,7 @@ export default function ImgCard({
           <input
             type="file"
             accept="image/*"
-            onChange={e => {
-              console.log(typeof e.target.files[0].name)
-              handleFileInputChange(e, true, preview)
-            }}
+            onChange={e => handleFileInputChange(e, true, preview)}
             size={22}
             value=""
             id={index}

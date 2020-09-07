@@ -2,8 +2,8 @@ import React, { useContext } from 'react'
 
 import ImgCard from './ImgCard'
 import s from './Images.styled'
-import { PetFormContext } from '../../../context/petForm'
-import { FormNavigationContext } from '../../../context/formNavigation'
+import { PetFormContext } from '../../../../context/petForm'
+import { FormNavigationContext } from '../../../../context/formNavigation'
 
 export default function AddImg() {
   const { petFormInfo, setPetFormInfo } = useContext(PetFormContext)
@@ -33,11 +33,15 @@ export default function AddImg() {
       if (!isImageNew) return
       if (isEditing) return editImage(reader.result, imagePreview)
 
-      setPetFormInfo({
-        ...petFormInfo,
-        images: [...petFormInfo.images, reader.result],
-      })
+      addImg(reader.result)
     }
+  }
+
+  function addImg(result) {
+    setPetFormInfo({
+      ...petFormInfo,
+      images: [...petFormInfo.images, result],
+    })
   }
 
   function editImage(source, preview) {
@@ -57,7 +61,7 @@ export default function AddImg() {
     setPetFormInfo({ ...petFormInfo, images: arr })
   }
 
-  if (formRoute !== 'imagens') {
+  if (formRoute !== 'images') {
     return null
   }
 

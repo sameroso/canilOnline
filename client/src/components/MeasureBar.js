@@ -5,11 +5,8 @@ import './MeasureBar.css'
 
 let arr = []
 
-export default function AngerBar(props) {
+export default function MeasureBar(props) {
   const [colors, setColors] = useState([])
-  const [angerLevel, setAngerLevel] = useState(null)
-
-  console.log(angerLevel)
 
   useEffect(() => {
     function initialbar() {
@@ -18,8 +15,8 @@ export default function AngerBar(props) {
       for (let i = 0; i <= (props.barSize || 10); i++) {
         arr.push({ number: i, isFilled: true })
       }
-      arr.map((element, i) => {
-        if (element.number <= (props.defaultValue || props.barSize || 0)) {
+      arr.forEach((element, i) => {
+        if (element.number <= (props.defaultValue || props.level || 0)) {
           arr[i].isFilled = true
         } else {
           arr[i].isFilled = false
@@ -31,7 +28,7 @@ export default function AngerBar(props) {
       setColors(newArr)
     }
     initialbar()
-  }, [])
+  }, [props?.level])
 
   const barElements = colors.map((el, index) => {
     const fillCollors = () => {
@@ -67,19 +64,8 @@ export default function AngerBar(props) {
               if (props.readOnly) {
                 return
               }
-              arr.map((element, i) => {
-                if (element.number <= el.number) {
-                  arr[i].isFilled = true
-                } else {
-                  arr[i].isFilled = false
-                }
-              })
 
-              setAngerLevel(el.number)
-
-              const newArr = [...arr]
-
-              setColors(newArr)
+              props.setLevel(el.number)
             }}
             style={{
               height: props.circleheight || '15px',
@@ -124,7 +110,7 @@ export default function AngerBar(props) {
   )
 }
 
-AngerBar.propTypes = {
+MeasureBar.propTypes = {
   props: PropTypes.shape({
     barSize: PropTypes.number,
     defaultValue: PropTypes.number,
@@ -139,6 +125,8 @@ AngerBar.propTypes = {
     numbersMarginLeft: PropTypes.string,
     initialParam: PropTypes.string,
     finalParam: PropTypes.string,
+    level: PropTypes.number,
+    setLevel: PropTypes.func,
   }),
   barSize: PropTypes.number,
   defaultValue: PropTypes.number,
@@ -153,4 +141,6 @@ AngerBar.propTypes = {
   numbersMarginLeft: PropTypes.string,
   initialParam: PropTypes.string,
   finalParam: PropTypes.string,
+  level: PropTypes.number,
+  setLevel: PropTypes.func,
 }

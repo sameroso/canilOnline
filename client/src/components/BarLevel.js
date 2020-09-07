@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import MeasureBar from '../../../components/MeasureBar'
+import MeasureBar from './MeasureBar'
 import s from './BarLevel.styled'
 
 export default function BarLevel({
@@ -10,6 +10,8 @@ export default function BarLevel({
   level,
   initialParam,
   finalParam,
+  setLevel,
+  readOnly,
 }) {
   return (
     <s.Container>
@@ -19,9 +21,11 @@ export default function BarLevel({
         </s.Text>
       </s.TextContainer>
       <MeasureBar
+        level={level}
+        setLevel={setLevel}
         filledColor="black"
         unFilledColor="green"
-        readOnly
+        readOnly={readOnly}
         lineHeight="4px"
         initialParam={initialParam}
         finalParam={finalParam}
@@ -42,4 +46,6 @@ BarLevel.propTypes = {
   mode: PropTypes.string,
   initialParam: PropTypes.string,
   finalParam: PropTypes.string,
+  readOnly: PropTypes.bool,
+  setLevel: PropTypes.func,
 }

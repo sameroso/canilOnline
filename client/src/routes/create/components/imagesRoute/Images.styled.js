@@ -2,6 +2,7 @@ import styled from 'styled-components'
 
 export default {
   ImgCardContainer: styled.div`
+    min-height: 160px;
     max-width: 800px;
     display: flex;
     margin: auto;
@@ -9,14 +10,23 @@ export default {
     border-radius: 10px;
     overflow: hidden;
     flex-wrap: wrap;
+    justify-content: center;
   `,
   SelecFileBtn: styled.label`
     border-radius: 10px;
     background-color: red;
     padding: 5px 15px;
     cursor: pointer;
-    &&:hover {
-      background-color: white;
+    @media (min-width: 678px) {
+      &:hover {
+        background-color: white;
+        outline: none;
+      }
+    }
+    &:active {
+      background-color: green;
+      height: 300px;
+      outline: none;
     }
   `,
   SelecFileBtnContainer: styled.div`

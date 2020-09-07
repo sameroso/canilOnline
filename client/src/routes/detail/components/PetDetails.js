@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 import s from './PetDetails.styled'
-import BarLevel from './BarLevel'
+import BarLevel from './../../../components/BarLevel'
 import Castrated from './Castrated'
 import Dewormed from './Dewormed'
 import Race from './Race'
@@ -18,6 +18,7 @@ export default function PetDetails({ petInfo }) {
           mode="bravo"
           initialParam="manso"
           finalParam="bravo"
+          readOnly={true}
         />
         <BarLevel
           petInfo={petInfo}
@@ -25,6 +26,7 @@ export default function PetDetails({ petInfo }) {
           mode="agitado"
           initialParam="calmo"
           finalParam="agitado"
+          readOnly={true}
         />
         <s.Info>
           <s.Margin>
