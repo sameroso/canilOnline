@@ -14,8 +14,6 @@ export default function PetPersonalitySelector() {
   return (
     <>
       <BarLevel
-        initialParam="manso"
-        finalParam="bravo"
         mode="bravo"
         readOnly={false}
         level={petFormInfo.angerLevel}
@@ -26,8 +24,6 @@ export default function PetPersonalitySelector() {
         unFilledColor="green"
       />
       <BarLevel
-        initialParam="calmo"
-        finalParam="agitado"
         mode="agitado"
         readOnly={false}
         level={petFormInfo.agitationLevel}

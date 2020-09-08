@@ -84,7 +84,15 @@ export default function MeasureBar(props) {
               marginLeft: props.numbersMarginLeft || '0px',
             }}
           >
-            <span style={{ textAlign: 'center' }}>{el.number}</span>
+            <span
+              style={{
+                textAlign: 'center',
+                fontFamily: "'Roboto','Helvetica','Arial',sans-serif",
+                color: el.isFilled ? props.filledColor : props.unFilledColor,
+              }}
+            >
+              {el.number}
+            </span>
           </div>
         </div>
       </div>

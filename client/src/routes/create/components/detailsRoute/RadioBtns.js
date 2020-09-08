@@ -9,10 +9,10 @@ import PetSize from './PetSize'
 export default function Castrated() {
   return (
     <s.RadioBtnsContainer>
-      <RadioBtnSex />
       <PetSize />
       <RadioBtnCastrated />
       <RadioBtnDewormed />
+      <RadioBtnSex />
     </s.RadioBtnsContainer>
   )
 }

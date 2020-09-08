@@ -19,7 +19,7 @@ export default {
     width: 30px;
     border-radius: 100px;
     background-color: white;
-    padding: 15px;
+    padding: 25px 19px;
     cursor: pointer;
     @media (min-width: 678px) {
       &:hover {
@@ -35,6 +35,6 @@ export default {
   `,
   SelecFileBtnContainer: styled.div`
     max-width: 800px;
-    margin: 40px auto 20px auto;
+    margin: 40px auto 35px auto;
   `,
 }

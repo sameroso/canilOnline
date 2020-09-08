@@ -9,3 +9,7 @@
 .thumb {
   cursor: pointer;
 }
+
+.MuiFormControl-root {
+  width: 80%;
+}
