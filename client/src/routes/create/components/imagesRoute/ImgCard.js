@@ -16,14 +16,14 @@ export default function ImgCard({
         <img src={preview} alt="chosen" height="130px" width="120px" />
         <div
           style={{
-            cursor: 'pointer',
             display: 'flex',
             justifyContent: 'space-around',
-            color: 'green',
           }}
         >
           <label htmlFor={index}>
-            <AiFillEdit size={22} />
+            <s.EditContainer>
+              <AiFillEdit size={22} />
+            </s.EditContainer>
           </label>
           <input
             type="file"
@@ -34,7 +34,9 @@ export default function ImgCard({
             id={index}
             style={{ display: 'none' }}
           />
-          <AiFillDelete onClick={() => deleteImg(preview)} size={22} />
+          <s.DeleteContainer>
+            <AiFillDelete onClick={() => deleteImg(preview)} size={22} />
+          </s.DeleteContainer>
         </div>
       </s.Border>
     </>

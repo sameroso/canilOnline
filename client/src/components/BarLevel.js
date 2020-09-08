@@ -23,8 +23,8 @@ export default function BarLevel({
       <MeasureBar
         level={level}
         setLevel={setLevel}
-        filledColor="black"
-        unFilledColor="green"
+        filledColor="#2c7d93"
+        unFilledColor="#9e9ea7"
         readOnly={readOnly}
         lineHeight="4px"
         initialParam={initialParam}
@@ -32,6 +32,7 @@ export default function BarLevel({
         lineWidth="10px"
         circleheight="15px"
         defaultValue={level}
+        barSize={5}
       />
     </s.Container>
   )

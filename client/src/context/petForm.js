@@ -5,10 +5,17 @@ export const PetFormContext = createContext()
 
 export function PetFormContextProvider({ children }) {
   const [petFormInfo, setPetFormInfo] = useState({
+    name: '',
     images: [],
-    angerLevel: 0,
-    agitationLevel: 0,
+    angerLevel: null,
+    agitationLevel: null,
     description: '',
+    sex: '',
+    castrated: '',
+    dewormed: '',
+    race: '',
+    size: '',
+    age: '',
   })
 
   return (

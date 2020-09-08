@@ -9,7 +9,6 @@ export default function PetPersonalitySelector() {
   const { formRoute, setFormRoute } = useContext(FormNavigationContext)
 
   console.log(setFormRoute)
-
   if (formRoute !== 'personality') return null
 
   return (
@@ -25,9 +24,6 @@ export default function PetPersonalitySelector() {
         }
         filledColor="black"
         unFilledColor="green"
-        lineHeight="4px"
-        lineWidth="10px"
-        circleheight="15px"
       />
       <BarLevel
         initialParam="calmo"
@@ -40,9 +36,6 @@ export default function PetPersonalitySelector() {
         }
         filledColor="black"
         unFilledColor="green"
-        lineHeight="4px"
-        lineWidth="10px"
-        circleheight="15px"
       />
     </>
   )

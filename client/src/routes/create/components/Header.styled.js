@@ -5,7 +5,6 @@ export default {
     max-width: 800px;
     display: flex;
     margin: auto;
-    border-radius: 10px;
     overflow: hidden;
     flex-wrap: wrap;
     justify-content: space-around;

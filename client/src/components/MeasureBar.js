@@ -16,7 +16,7 @@ export default function MeasureBar(props) {
         arr.push({ number: i, isFilled: true })
       }
       arr.forEach((element, i) => {
-        if (element.number <= (props.defaultValue || props.level || 0)) {
+        if (element.number <= (props.level || 0)) {
           arr[i].isFilled = true
         } else {
           arr[i].isFilled = false
@@ -113,7 +113,6 @@ export default function MeasureBar(props) {
 MeasureBar.propTypes = {
   props: PropTypes.shape({
     barSize: PropTypes.number,
-    defaultValue: PropTypes.number,
     filledColor: PropTypes.string,
     unFilledColor: PropTypes.string,
     lineHeight: PropTypes.string,
@@ -129,7 +128,6 @@ MeasureBar.propTypes = {
     setLevel: PropTypes.func,
   }),
   barSize: PropTypes.number,
-  defaultValue: PropTypes.number,
   filledColor: PropTypes.string,
   unFilledColor: PropTypes.string,
   lineHeight: PropTypes.string,

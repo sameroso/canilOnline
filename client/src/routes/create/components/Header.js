@@ -16,7 +16,7 @@ export default function Header() {
         formRoute={formRoute}
       />
       <HeaderElement
-        name="personalidade"
+        name="pessoal"
         route="personality"
         setRoute={setFormRoute}
         formRoute={formRoute}

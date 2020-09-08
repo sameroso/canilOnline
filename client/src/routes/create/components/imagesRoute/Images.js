@@ -4,6 +4,8 @@ import ImgCard from './ImgCard'
 import s from './Images.styled'
 import { PetFormContext } from '../../../../context/petForm'
 import { FormNavigationContext } from '../../../../context/formNavigation'
+import { FaCameraRetro } from 'react-icons/fa'
+import { GrFormAdd } from 'react-icons/gr'
 
 export default function AddImg() {
   const { petFormInfo, setPetFormInfo } = useContext(PetFormContext)
@@ -68,7 +70,10 @@ export default function AddImg() {
   return (
     <>
       <s.SelecFileBtnContainer>
-        <s.SelecFileBtn htmlFor="btn">Imagens</s.SelecFileBtn>
+        <s.SelecFileBtn htmlFor="btn">
+          <GrFormAdd color="white!important" />
+          <FaCameraRetro color="#ea4c89" />
+        </s.SelecFileBtn>
       </s.SelecFileBtnContainer>
       <form>
         <input

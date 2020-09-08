@@ -6,32 +6,35 @@ export default {
     max-width: 800px;
     display: flex;
     margin: auto;
-    border: 3px solid green;
+    border: 3px solid rgb(234, 76, 137);
     border-radius: 10px;
     overflow: hidden;
     flex-wrap: wrap;
     justify-content: center;
   `,
   SelecFileBtn: styled.label`
-    border-radius: 10px;
-    background-color: red;
-    padding: 5px 15px;
+    border: 1px solid #0d0c22;
+    margin-left: 10px;
+    height: 30px;
+    width: 30px;
+    border-radius: 100px;
+    background-color: white;
+    padding: 15px;
     cursor: pointer;
     @media (min-width: 678px) {
       &:hover {
-        background-color: white;
+        background-color: rgba(51, 51, 51, 0.05);
         outline: none;
       }
     }
     &:active {
-      background-color: green;
+      background-color: rgba(51, 51, 51, 0.05);
       height: 300px;
       outline: none;
     }
   `,
   SelecFileBtnContainer: styled.div`
-    margin-left: 8%;
-    margin-bottom: 10px;
-    margin-top: 10px;
+    max-width: 800px;
+    margin: 40px auto 20px auto;
   `,
 }

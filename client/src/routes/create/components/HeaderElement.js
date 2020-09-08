@@ -3,14 +3,20 @@ import PropTypes from 'prop-types'
 
 import s from './HeaderElement.styled'
 
-export default function HeaderElement({ route, setRoute, formRoute, name }) {
+export default function HeaderElement({
+  route,
+  setRoute,
+  formRoute,
+  name,
+  mt,
+}) {
   return (
     <s.Container
-      style={{ textAlign: 'center' }}
       onClick={() => setRoute(route)}
+      mt={mt}
+      isRoute={route === formRoute}
     >
-      <span>{name}</span>
-      {route === formRoute && <hr />}
+      <s.Text>{name}</s.Text>
     </s.Container>
   )
 }
@@ -20,4 +26,5 @@ HeaderElement.propTypes = {
   setRoute: PropTypes.func,
   formRoute: PropTypes.string,
   name: PropTypes.string,
+  mt: PropTypes.string,
 }

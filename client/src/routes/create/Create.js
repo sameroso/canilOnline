@@ -7,21 +7,20 @@ import PetPersonalityselector from './components/personalityRoute/PetPersonality
 import Details from './components/detailsRoute/Detail'
 import { PetFormContextProvider } from '../../context/petForm'
 import { FormNavigationContextProvider } from '../../context/formNavigation'
+import s from './Create.styled'
 
 export default function Create() {
   return (
     <PetFormContextProvider>
       <FormNavigationContextProvider>
-        <Header />
-        <div>
-          <Images />
-        </div>
-        <div>
-          <PetPersonalityselector />
-        </div>
-        <div>
-          <Details />
-        </div>
+        <s.Container>
+          <div>
+            <Header />
+            <Images />
+            <PetPersonalityselector />
+            <Details />
+          </div>
+        </s.Container>
       </FormNavigationContextProvider>
     </PetFormContextProvider>
   )
