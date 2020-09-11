@@ -37,4 +37,5 @@ export default {
     display: flex;
     justify-content: center;
   `,
+  VaccinationContainer: styled.div``,
 }

@@ -16,6 +16,7 @@ export function PetFormContextProvider({ children }) {
     race: '',
     size: '',
     age: '',
+    vaccines: [{ id: '1', name: 'V8', date: Date.now() }],
   })
 
   return (

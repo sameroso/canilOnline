@@ -6,6 +6,7 @@ import { PetFormContext } from '../../../../context/petForm'
 import Race from './Race'
 import Age from './Age'
 import Name from './Name'
+import Vaccination from './Vaccination'
 import RadioBtns from './RadioBtns'
 import s from './Detail.styled'
 
@@ -28,6 +29,9 @@ export default function Details() {
         <s.FormContainer>
           <RadioBtns />
         </s.FormContainer>
+        <s.VaccinationContainer>
+          <Vaccination />
+        </s.VaccinationContainer>
         <div>
           <div style={{ margin: '10px 20px' }}>
             <s.Description>Descrição</s.Description>

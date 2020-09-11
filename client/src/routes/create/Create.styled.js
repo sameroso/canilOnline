@@ -10,5 +10,6 @@ export default {
     background-color: rgba(51, 51, 51, 0.05);
     border-radius: 10px;
     padding-bottom: 20px;
+    min-height: 100vh;
   `,
 }

@@ -37,4 +37,7 @@ export default {
     max-width: 800px;
     margin: 40px auto 35px auto;
   `,
+  ArrowContainer: styled.div`
+    cursor: pointer;
+  `,
 }

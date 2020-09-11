@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 export const FormNavigationContext = createContext()
 
 export function FormNavigationContextProvider({ children }) {
-  const [formRoute, setFormRoute] = useState('images')
+  const [formRoute, setFormRoute] = useState('details')
 
   return (
     <FormNavigationContext.Provider value={{ formRoute, setFormRoute }}>
