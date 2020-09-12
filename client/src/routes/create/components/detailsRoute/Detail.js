@@ -3,6 +3,7 @@ import TextareaAutosize from 'react-textarea-autosize'
 
 import { FormNavigationContext } from '../../../../context/formNavigation'
 import { PetFormContext } from '../../../../context/petForm'
+import ArrowsNavigator from '../ArrowsNavigator'
 import Race from './Race'
 import Age from './Age'
 import Name from './Name'
@@ -12,15 +13,17 @@ import s from './Detail.styled'
 
 export default function Details() {
   const { petFormInfo, setPetFormInfo } = useContext(PetFormContext)
-  const { formRoute, setFormRoute } = useContext(FormNavigationContext)
-
-  console.log(setFormRoute)
+  const { formRoute } = useContext(FormNavigationContext)
 
   if (formRoute !== 'details') return null
 
   return (
     <s.Container>
       <s.SubContainer>
+        <ArrowsNavigator
+          fowardArrowRoute="owner"
+          backwardArrowRoute="personality"
+        />
         <s.InputsContainer>
           <Name />
           <Race />

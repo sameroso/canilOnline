@@ -1,15 +1,16 @@
 import React, { useContext } from 'react'
+import { GrFormAdd } from 'react-icons/gr'
+import { FaCameraRetro } from 'react-icons/fa'
 
 import ImgCard from './ImgCard'
 import s from './Images.styled'
 import { PetFormContext } from '../../../../context/petForm'
 import { FormNavigationContext } from '../../../../context/formNavigation'
-import { FaCameraRetro, FaArrowCircleRight } from 'react-icons/fa'
-import { GrFormAdd } from 'react-icons/gr'
+import ArrowsNavigator from '../ArrowsNavigator'
 
 export default function AddImg() {
   const { petFormInfo, setPetFormInfo } = useContext(PetFormContext)
-  const { formRoute, setFormRoute } = useContext(FormNavigationContext)
+  const { formRoute } = useContext(FormNavigationContext)
 
   const handleFileInputChange = (e, isEditing, preview) => {
     const file = e.target.files[0]
@@ -69,20 +70,7 @@ export default function AddImg() {
 
   return (
     <>
-      <div
-        style={{
-          display: 'flex',
-          justifyContent: 'flex-end',
-          margin: '20px',
-        }}
-      >
-        <s.ArrowContainer>
-          <FaArrowCircleRight
-            size={24}
-            onClick={() => console.log(setFormRoute)}
-          />
-        </s.ArrowContainer>
-      </div>
+      <ArrowsNavigator fowardArrowRoute="personality" />
       <s.SelecFileBtnContainer>
         <s.SelecFileBtn htmlFor="btn">
           <GrFormAdd color="white!important" />

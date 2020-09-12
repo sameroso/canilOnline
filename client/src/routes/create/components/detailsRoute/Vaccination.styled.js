@@ -13,5 +13,15 @@ export default {
   `,
   Col: styled.div`
     margin: auto;
+    padding: 10px 0;
+  `,
+  VaccineTableTitle: styled.span`
+    color: rgba(0, 0, 0, 0.54);
+    padding: 0;
+    font-size: 1rem;
+    font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
+    font-weight: 400;
+    line-height: 1;
+    letter-spacing: 0.00938em;
   `,
 }

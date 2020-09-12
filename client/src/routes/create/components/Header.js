@@ -28,8 +28,8 @@ export default function Header() {
         formRoute={formRoute}
       />
       <HeaderElement
-        name="jose"
-        route="jose"
+        name="dono"
+        route="owner"
         setRoute={setFormRoute}
         formRoute={formRoute}
       />

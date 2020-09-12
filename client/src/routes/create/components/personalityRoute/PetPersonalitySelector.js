@@ -2,17 +2,18 @@ import React, { useContext } from 'react'
 
 import { FormNavigationContext } from '../../../../context/formNavigation'
 import { PetFormContext } from '../../../../context/petForm'
+import ArrowsNavigator from '../ArrowsNavigator'
 import BarLevel from '../../../../components/BarLevel'
 
 export default function PetPersonalitySelector() {
   const { petFormInfo, setPetFormInfo } = useContext(PetFormContext)
-  const { formRoute, setFormRoute } = useContext(FormNavigationContext)
+  const { formRoute } = useContext(FormNavigationContext)
 
-  console.log(setFormRoute)
   if (formRoute !== 'personality') return null
 
   return (
     <>
+      <ArrowsNavigator fowardArrowRoute="details" backwardArrowRoute="images" />
       <BarLevel
         mode="bravo"
         readOnly={false}

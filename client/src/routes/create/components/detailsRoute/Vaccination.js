@@ -1,4 +1,5 @@
 import React, { useContext } from 'react'
+import { FcPlus } from 'react-icons/fc'
 
 import { PetFormContext } from '../../../../context/petForm'
 import s from './Vaccination.styled'
@@ -12,10 +13,13 @@ export default function Vaccination() {
     <s.Container>
       <s.Row>
         <s.Col>
-          <span>Vacina</span>
+          <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+            <FcPlus />
+            <s.VaccineTableTitle>Vacina</s.VaccineTableTitle>
+          </div>
         </s.Col>
         <s.Col>
-          <span>data</span>
+          <s.VaccineTableTitle>data</s.VaccineTableTitle>
         </s.Col>
       </s.Row>
       {petFormInfo.vaccines.map(vaccine => (
