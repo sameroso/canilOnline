@@ -1,7 +1,13 @@
-import React, { useState } from 'react'
+import React, { useState, useContext } from 'react'
 import axios from 'axios'
 
+import { PetFormContext } from '../../../../context/petForm'
+
 export default function Adress() {
+  const { petFormInfo, setPetFormInfo } = useContext(PetFormContext)
+
+  console.log(petFormInfo)
+
   const [cep, setCep] = useState('')
 
   return (
@@ -12,11 +18,14 @@ export default function Adress() {
           if (cep.length < 8) {
             return
           }
-          axios.post('/api/searchCep', { cep })
+          axios
+            .post('/api/getAddress', { cep })
+            .then(res => setPetFormInfo({ ...petFormInfo, ownerAddress: res }))
         }}
       >
         vai
       </button>
+      <div>{petFormInfo.ownerAddress?.bairro}</div>
     </>
   )
 }
