@@ -22,4 +22,11 @@ export default {
       color: #3666a0;
     }
   `,
+  ResizeContainer: styled.div`
+    cursor: pointer;
+    color: #0d0c22;
+    &&:hover {
+      color: #3666a0;
+    }
+  `,
 }

@@ -6,9 +6,9 @@ import { PetFormContext } from '../../../../context/petForm'
 export default function Adress() {
   const { petFormInfo, setPetFormInfo } = useContext(PetFormContext)
 
-  console.log(petFormInfo)
-
   const [cep, setCep] = useState('')
+
+  //function handleCepInputChange() {}
 
   return (
     <>
@@ -20,12 +20,16 @@ export default function Adress() {
           }
           axios
             .post('/api/getAddress', { cep })
-            .then(res => setPetFormInfo({ ...petFormInfo, ownerAddress: res }))
+            .then(res =>
+              setPetFormInfo({ ...petFormInfo, ownerAddress: res.data }),
+            )
         }}
       >
         vai
       </button>
       <div>{petFormInfo.ownerAddress?.bairro}</div>
+      <div>{petFormInfo.ownerAddress?.localidade}</div>
+      <div>{petFormInfo.ownerAddress?.logradouro}</div>
     </>
   )
 }

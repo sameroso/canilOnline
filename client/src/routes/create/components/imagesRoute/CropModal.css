@@ -1,0 +1,11 @@
+.modalStyle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: scroll;
+  outline: none;
+}
+
+.modalStyle:focus {
+  outline: none;
+}

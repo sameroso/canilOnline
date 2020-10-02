@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { useContext, useState, useRef } from 'react'
 import { GrFormAdd } from 'react-icons/gr'
 import { FaCameraRetro } from 'react-icons/fa'
 
@@ -7,61 +7,55 @@ import s from './Images.styled'
 import { PetFormContext } from '../../../../context/petForm'
 import { FormNavigationContext } from '../../../../context/formNavigation'
 import ArrowsNavigator from '../ArrowsNavigator'
+import { handleFileSubmit } from '../../../../helpers/ImageHelpers'
+import CropModal from './CropModal'
 
 export default function AddImg() {
+  const [isModalOpen, setIsModalOpen] = useState(false)
   const { petFormInfo, setPetFormInfo } = useContext(PetFormContext)
   const { formRoute } = useContext(FormNavigationContext)
+  const imageEditInfo = useRef()
 
   const handleFileInputChange = (e, isEditing, preview) => {
     const file = e.target.files[0]
 
-    previewFile(file, isEditing, preview)
-  }
-
-  const previewFile = (file, isEditing, imagePreview) => {
-    let isImageNew = true
-    const reader = new FileReader()
-
     if (!file) return
 
-    reader.readAsDataURL(file)
-
-    reader.onloadend = () => {
-      petFormInfo.images.forEach(preview => {
-        if (preview === reader.result) {
-          isImageNew = false
-        }
-      })
-
-      if (!isImageNew) return
-      if (isEditing) return editImage(reader.result, imagePreview)
-
-      addImg(reader.result)
-    }
+    if (!file.name.match(/\.(jpg|jpeg|png|gif)$/)) return
+    handleFileSubmit(
+      file,
+      isEditing,
+      preview,
+      petFormInfo,
+      setPetFormInfo,
+      setIsModalOpen,
+      imageEditInfo,
+    )
   }
 
-  function addImg(result) {
-    setPetFormInfo({
-      ...petFormInfo,
-      images: [...petFormInfo.images, result],
+  function deleteImg(rawImgSelected) {
+    const arr = [...petFormInfo.images]
+    const index = petFormInfo.images.findIndex(imageObj => {
+      return imageObj.raw === rawImgSelected
     })
-  }
-
-  function editImage(source, preview) {
-    const arr = [...petFormInfo.images]
-    const index = petFormInfo.images.indexOf(preview)
-
-    arr[index] = source
-
-    setPetFormInfo({ ...petFormInfo, images: arr })
-  }
-
-  function deleteImg(previewSelected) {
-    const arr = [...petFormInfo.images]
-    const index = petFormInfo.images.indexOf(previewSelected)
 
     arr.splice(index, 1)
     setPetFormInfo({ ...petFormInfo, images: arr })
+  }
+
+  function resizeImage(rawImgSelected) {
+    const arr = [...petFormInfo.images]
+
+    const index = petFormInfo.images.findIndex(imageObj => {
+      return imageObj.raw === rawImgSelected
+    })
+
+    imageEditInfo.current = {
+      index,
+      userImagesArr: arr,
+      previous: arr[index],
+    }
+    setIsModalOpen(true)
   }
 
   if (formRoute !== 'images') {
@@ -70,6 +64,17 @@ export default function AddImg() {
 
   return (
     <>
+      <CropModal
+        imageEditInfo={imageEditInfo}
+        rawImg={
+          imageEditInfo.current?.userImagesArr[imageEditInfo.current?.index]
+            ?.raw || petFormInfo.images[petFormInfo.images.length - 1]?.raw
+        }
+        isModalOpen={isModalOpen}
+        setIsModalOpen={setIsModalOpen}
+        petFormInfo={petFormInfo}
+        setPetForminfo={setPetFormInfo}
+      />
       <ArrowsNavigator fowardArrowRoute="personality" />
       <s.SelecFileBtnContainer>
         <s.SelecFileBtn htmlFor="btn">
@@ -89,15 +94,21 @@ export default function AddImg() {
       </form>
       <s.ImgCardContainer>
         {petFormInfo.images.length > 0 &&
-          petFormInfo.images.map((preview, i) => (
-            <ImgCard
-              preview={preview}
-              key={preview}
-              deleteImg={deleteImg}
-              handleFileInputChange={handleFileInputChange}
-              index={i}
-            />
-          ))}
+          petFormInfo.images.map((preview, i) => {
+            return (
+              preview.cropped && (
+                <ImgCard
+                  key={preview.cropped}
+                  preview={preview.cropped}
+                  rawImg={preview.raw}
+                  deleteImg={deleteImg}
+                  resizeImage={resizeImage}
+                  handleFileInputChange={handleFileInputChange}
+                  index={i}
+                />
+              )
+            )
+          })}
       </s.ImgCardContainer>
     </>
   )

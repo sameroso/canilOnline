@@ -11,7 +11,7 @@ export default function Home() {
         <s.flex>
           <s.Container />
           <s.flexChild>
-            <img src={dog} height="50%" width="250px" />
+            <img src={dog} height="50%" width="250px" alt="" />
           </s.flexChild>
           <s.flexChild>
             <s.text>
